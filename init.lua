@@ -739,23 +739,37 @@ require('lazy').setup {
   --  end,
   --},
 
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   opts = {
+  --     --transparent_background = true,
+  --     integrations = {
+  --       telescope = true,
+  --       harpoon = true,
+  --       mason = true,
+  --       treesitter = true,
+  --       --neotest = true,
+  --     },
+  --   },
+  --   config = function(_, opts)
+  --     require('catppuccin').setup(opts)
+  --     vim.cmd.colorscheme 'catppuccin-mocha'
+  --   end,
+  -- },
+
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
     priority = 1000,
-    opts = {
-      transparent_background = true,
-      integrations = {
-        telescope = true,
-        harpoon = true,
-        mason = true,
-        treesitter = true,
-        --neotest = true,
-      },
-    },
-    config = function(_, opts)
-      require('catppuccin').setup(opts)
-      vim.cmd.colorscheme 'catppuccin-mocha'
+    lazy = false,
+    config = function()
+      require('onedark').setup {
+        -- Set a style preset. 'dark' is default.
+        style = 'darker', -- dark, darker, cool, deep, warm, warmer, light
+      }
+      require('onedark').load()
     end,
   },
 
