@@ -759,27 +759,27 @@ require('lazy').setup {
   --   end,
   -- },
 
-  {
-    'tjdevries/colorbuddy.nvim',
-    config = function(_, opts)
-      require('colorbuddy').setup(opts)
-      vim.cmd.colorscheme 'gruvbuddy'
-    end,
-  },
-
   --  {
-  --    -- Theme inspired by Atom
-  --    'navarasu/onedark.nvim',
-  --    priority = 1000,
-  --    lazy = false,
-  --    config = function()
-  --      require('onedark').setup {
-  --        -- Set a style preset. 'dark' is default.
-  --        style = 'darker', -- dark, darker, cool, deep, warm, warmer, light
-  --      }
-  --      require('onedark').load()
+  --    'tjdevries/colorbuddy.nvim',
+  --    config = function(_, opts)
+  --      require('colorbuddy').setup(opts)
+  --      vim.cmd.colorscheme 'gruvbuddy'
   --    end,
   --  },
+
+  {
+    -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require('onedark').setup {
+        -- Set a style preset. 'dark' is default.
+        style = 'darker', -- dark, darker, cool, deep, warm, warmer, light
+      }
+      require('onedark').load()
+    end,
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
