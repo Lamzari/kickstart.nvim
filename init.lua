@@ -344,6 +344,9 @@ require('lazy').setup {
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
+        defaults = {
+          layout_config = { height = 0.95, width = 0.95, prompt_position = 'bottom' },
+        },
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
