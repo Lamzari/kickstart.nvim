@@ -894,6 +894,7 @@ require('lazy').setup({
 
     config = function()
       vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = '[u]ndo tree toggle' })
+      vim.g.undotree_DiffCommand = 'FC'
     end,
   },
 
